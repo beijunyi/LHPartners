@@ -1,0 +1,50 @@
+<!--Authored by http://www.beijunyi.com on 17th March 2014-->
+
+<!doctype html>
+<html lang="en" ng-app="LHPartners">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="cache-control" content="max-age=31536000" />
+  <title>L&H Partners</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="icon" type="image/png" href="/resources/images/favicon.png">
+</head>
+<body>
+
+<!--<img class="body-background" src="/resources/images/background.png">-->
+
+<section id="content">
+  <div class="main-container">
+    <div class="container-bar top main-background"></div>
+    <div class="container-brand">
+      <!--<a href="#/home"><img src="/resources/images/brand.png"></a>-->
+    </div>
+    <div ng-view></div>
+    <div class="container-nav" ng-controller="NavigationController">
+      <a ng-class="{highlight: isActive('/home')}" href="#/home">Home</a>
+      <span>/</span>
+      <a ng-class="{highlight: isActive('/service')}" href="#/service">Service</a>
+      <span>/</span>
+      <a ng-class="{highlight: isActive('/contact')}" href="#/contact">Contact</a>
+    </div>
+    <div class="container-bar bottom main-background"></div>
+  </div>
+  <div class="main-footer">
+    <span>Copyright © 2014 L&H Partners. All rights reserved.</span>
+  </div>
+</section>
+
+<script src="lib/JQuery/jquery-2.1.0.min.js"></script>
+<script src="lib/AngularJS/angular.js"></script>
+<script src="lib/AngularJS/angular-route.js"></script>
+<script src="lib/AngularJS/angular-sanitize.js"></script>
+<!--<script src="lib/AngularJS/angular.min.js"></script>-->
+<!--<script src="lib/AngularJS/angular-route.min.js"></script>-->
+<!--<script src="lib/AngularJS/angular-sanitize.min.js"></script>-->
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+<script src="js/service.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>
