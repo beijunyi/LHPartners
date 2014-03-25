@@ -11,6 +11,11 @@
 }
 
 @font-face {
+  font-family: CandaraBold;
+  src: url("/resources/font/CandaraBold.ttf");
+}
+
+@font-face {
   font-family: OratorStd;
   src: url("/resources/font/OratorStd.otf");
 }
@@ -46,7 +51,7 @@ body {
 }
 
 #top-container {
-  height: 300px;
+  height: 250px;
   width: 100%;
   position: relative;
 }
@@ -94,6 +99,38 @@ body {
   width: 50%;
   height: 330px;
   display: inline-block;
+}
+
+div.service-row {
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.service-cell {
+  width: 112px;
+  height: 123px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: text-top;
+  margin: 7px;
+}
+
+div.service-cell > span {
+  font: italic 14.68px/18.26px CandaraBold, sans-serif;
+  display: block;
+  height: 100px;
+  padding-top: 18px;
+}
+
+div.service-cell-even > span {
+  color: #C30D23;
+}
+
+div.service-cell-splitter {
+  background-color: #C30D23;
+  width: 112px;
+  height: 11px;
 }
 
 #contact-left-container {
