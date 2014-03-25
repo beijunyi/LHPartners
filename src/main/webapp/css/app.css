@@ -4,3 +4,102 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: Candara;
+  src: url("/resources/font/Candara.ttf");
+}
+
+@font-face {
+  font-family: OratorStd;
+  src: url("/resources/font/OratorStd.otf");
+}
+
+body {
+  background: url("/resources/images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+#semi-transparent-background {
+  width: 980px;
+  height: 100%;
+  left: 50%;
+  margin-left: -490px;
+  background: rgba(255, 255, 255, 0.46);
+  position: absolute;
+}
+
+#fixed-bottom-bar {
+  position: absolute;
+  background-color: #C30D23;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+}
+
+#fixed-bottom-bar > span {
+  display: block;
+  text-align: center;
+  font-family: Candara, sans-serif;
+  margin-top: 5px;
+}
+
+#top-container {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+#brand-container {
+  position: relative;
+  margin: 60px auto 50px;
+  width: 221px;
+  height: 130px;
+}
+
+#nav-container {
+  position: relative;
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav-container > a {
+  margin-left: 45px;
+  margin-right: 45px;
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  font-family: OratorStd, sans-serif;
+  font-size: 17.14px;
+  color: #C30D23;
+}
+
+#home > div {
+  width: 50%;
+  height: 330px;
+  display: inline-block;
+}
+
+#home-left-container {
+
+}
+
+#home-right-container {
+  background-color: #C30D23;
+}
+
+#contact > div {
+  width: 50%;
+  height: 330px;
+  display: inline-block;
+}
+
+#contact-left-container {
+  background: url("/resources/images/contact.jpg") no-repeat center center;
+}
+
+#contact-right-container {
+
+}
