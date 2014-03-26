@@ -1,9 +1,9 @@
 //Authored by http://www.beijunyi.com on 17th March 2014
 
-app.controller('NavigationController', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
-  $(document).keydown(function (e) {
+app.controller('NavigationController', ['$scope', '$rootScope', '$location', '$document', function ($scope, $rootScope, $location, $document) {
+  $document.keydown(function (e) {
 
-    var home = "/home", about = "/service", contact = "/contact";
+    var home = "/home", service = "/service", contact = "/contact";
 
     function view(path) {
       $rootScope.$apply(function() {
@@ -18,13 +18,13 @@ app.controller('NavigationController', ['$scope', '$rootScope', '$location', fun
         if(path == home)
           view(contact);
         else if(path == contact)
-          view(about);
-        else if(path == about)
+          view(service);
+        else if(path == service)
           view(home);
       } else {
         if(path == home)
-          view(about);
-        else if(path == about)
+          view(service);
+        else if(path == service)
           view(contact);
         else if(path == contact)
           view(home);
