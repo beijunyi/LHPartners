@@ -140,11 +140,11 @@ div.home-slide-text > div {
   text-align: center;
 }
 
-#home-slide-title {
+div.home-slide-title {
   font: 20.27px CandaraBold, sans-serif;
 }
 
-#home-slide-content {
+div.home-slide-content {
   font: italic 16.41px Candara, sans-serif;
 }
 
