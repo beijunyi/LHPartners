@@ -88,11 +88,28 @@ body {
 }
 
 #home-left-container {
-
+  background: url("/resources/images/home_slide1.jpg") no-repeat center center;
+  float: left;
 }
 
 #home-right-container {
   background-color: #C30D23;
+  float: right;
+}
+
+#home-right-container > div {
+  height: 165px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+#home-slide-title {
+  font: 20.27px CandaraBold, sans-serif;
+}
+
+#home-slide-content {
+  font: italic 16.41px Candara, sans-serif;
 }
 
 #contact > div {
