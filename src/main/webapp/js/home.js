@@ -17,7 +17,7 @@ app.controller('HomeController', ['$scope', '$timeout',
     var currentSlideImage, currentSlideText;
     var promise;
 
-    function hideCurrent(callback) {
+    function hideCurrent() {
       if(currentSlideImage) {
         currentSlideImage.fadeOut({
           duration: FADE_OUT_DURATION,
@@ -26,20 +26,12 @@ app.controller('HomeController', ['$scope', '$timeout',
             if(currentSlideText) {
               currentSlideText.fadeOut({
                 duration: FADE_OUT_DURATION,
-                easing: FADE_OUT_EASING,
-                complete: function() {
-                  currentSlideText = null;
-                }
+                easing: FADE_OUT_EASING
               });
             }
-          },
-          complete: function() {
-            currentSlideImage = null;
-            callback();
           }
         });
-      } else
-        callback();
+      }
     }
 
     function showCurrent(callback) {
@@ -64,16 +56,17 @@ app.controller('HomeController', ['$scope', '$timeout',
     }
 
     function fadeCycle(callback) {
-      function hideStep() {
-        hideCurrent(callback);
+      function hidePhase() {
+        hideCurrent();
+        callback();
       }
-      function displayStep() {
-        promise = $timeout(hideStep, SLIDE_SHOW_DURATION);
+      function displayPhase() {
+        promise = $timeout(hidePhase, SLIDE_SHOW_DURATION);
       }
-      function showStep() {
-        showCurrent(displayStep)
+      function showPhase() {
+        showCurrent(displayPhase)
       }
-      showStep();
+      showPhase();
     }
 
     function showSlide(slide, callback) {
@@ -94,16 +87,19 @@ app.controller('HomeController', ['$scope', '$timeout',
       }
 
       showNextSlide();
-
     }
 
-    $scope.$on('$locationChangeStart', function(){
-      $timeout.cancel(promise);
-    });
+    function stopAll() {
+      if(promise)
+        $timeout.cancel(promise);
+      if(currentSlideImage)
+        currentSlideImage.stop();
+      if(currentSlideText)
+        currentSlideText.stop();
+    }
 
-    $scope.$on('$destroy', function(){
-      $timeout.cancel(promise);
-    });
+    $scope.$on('$locationChangeStart', stopAll);
+    $scope.$on('$destroy', stopAll);
 
     showSlides();
 

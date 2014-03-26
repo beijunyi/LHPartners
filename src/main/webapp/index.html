@@ -13,23 +13,21 @@
 
 <!--<img class="body-background" src="/resources/images/background.png">-->
 
-<section id="content">
-  <div id="semi-transparent-background">
-    <div id="top-container">
-      <div id="brand-container">
-        <img src="/resources/images/brand.png">
-      </div>
-      <div id="nav-container" ng-controller="NavigationController">
-        <a ng-class="{highlight: isActive('/home')}" href="#/home">HOME</a><a ng-class="{highlight: isActive('/service')}" href="#/service">SERVICE</a><a ng-class="{highlight: isActive('/contact')}" href="#/contact">CONTACT</a>
-      </div>
+<div id="semi-transparent-background">
+  <div id="top-container">
+    <div id="brand-container">
+      <img src="/resources/images/brand.png">
     </div>
-    <div ng-view></div>
-    <div class="container-bar bottom main-background"></div>
+    <div id="nav-container" ng-controller="NavigationController">
+      <a ng-class="{highlight: isActive('/home')}" href="#/home">HOME</a><a ng-class="{highlight: isActive('/service')}" href="#/service">SERVICE</a><a ng-class="{highlight: isActive('/contact')}" href="#/contact">CONTACT</a>
+    </div>
   </div>
-  <div id="fixed-bottom-bar">
-    <span>Copyright © 2014 L&H Partners. All rights reserved.</span>
-  </div>
-</section>
+  <div ng-view></div>
+  <div class="container-bar bottom main-background"></div>
+</div>
+<div id="fixed-bottom-bar">
+  <span>Copyright © 2014 L&H Partners. All rights reserved.</span>
+</div>
 
 <script src="lib/JQuery/jquery-2.1.0.min.js"></script>
 <script src="lib/AngularJS/angular.js"></script>
