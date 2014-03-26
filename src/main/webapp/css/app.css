@@ -88,8 +88,40 @@ body {
 }
 
 #home-left-container {
-  background: url("/resources/images/home_slide1.jpg") no-repeat center center;
   float: left;
+}
+
+#home-left-container > div {
+  width: 100%;
+  height: 100%;
+}
+
+div.home-slide-image {
+  display: none;
+}
+
+#home-slide1-image {
+  background: url("/resources/images/home_slide1.jpg") no-repeat center center;
+}
+
+#home-slide2-image {
+  background: url("/resources/images/home_slide2.jpg") no-repeat center center;
+}
+
+#home-slide3-image {
+  background: url("/resources/images/home_slide3.jpg") no-repeat center center;
+}
+
+#home-slide4-image {
+  background: url("/resources/images/home_slide4.jpg") no-repeat center center;
+}
+
+#home-slide5-image {
+  background: url("/resources/images/home_slide5.jpg") no-repeat center center;
+}
+
+#home-slide6-image {
+  background: url("/resources/images/home_slide6.jpg") no-repeat center center;
 }
 
 #home-right-container {
@@ -97,7 +129,11 @@ body {
   float: right;
 }
 
-#home-right-container > div {
+div.home-slide-text {
+  display: none;
+}
+
+div.home-slide-text > div {
   height: 165px;
   width: 100%;
   color: white;
