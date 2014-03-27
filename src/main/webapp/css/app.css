@@ -32,7 +32,7 @@ body {
   left: 50%;
   margin-left: -490px;
   background: rgba(255, 255, 255, 0.46);
-  position: absolute;
+  position: fixed;
 }
 
 #fixed-bottom-bar {
@@ -215,5 +215,18 @@ div.service-cell-splitter {
 }
 
 #contact-right-container {
+  font: 14.47px Candara, sans-serif;
+}
 
+div.contact-cell-splitter {
+  background-color: #C30D23;
+  width: 100px;
+  height: 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h3.contact-heading {
+  color: #C30D23;
+  margin: 0;
 }
