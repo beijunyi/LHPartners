@@ -172,12 +172,6 @@ div.home-slide-content span {
   position: absolute;
 }
 
-#contact > div {
-  width: 50%;
-  height: 330px;
-  display: inline-block;
-}
-
 div.service-row {
   width: 630px;
   margin-left: auto;
@@ -210,12 +204,25 @@ div.service-cell-splitter {
   height: 11px;
 }
 
+#contact > div {
+  width: 50%;
+  height: 330px;
+  display: inline-block;
+  position: absolute;
+}
+
 #contact-left-container {
   background: url("/resources/images/contact.jpg") no-repeat center center;
+  left: 0;
 }
 
 #contact-right-container {
   font: 14.47px Candara, sans-serif;
+  right: 0;
+}
+
+#contact-right-container > div {
+  padding-left: 120px;
 }
 
 div.contact-cell-splitter {
