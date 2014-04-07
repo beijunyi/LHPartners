@@ -7,21 +7,21 @@
 
 @font-face {
   font-family: Candara;
-  src: url("/resources/font/Candara.ttf");
+  src: url("../font/Candara.ttf");
 }
 
 @font-face {
   font-family: CandaraBold;
-  src: url("/resources/font/CandaraBold.ttf");
+  src: url("../font/CandaraBold.ttf");
 }
 
 @font-face {
   font-family: OratorStd;
-  src: url("/resources/font/OratorStd.otf");
+  src: url("../font/OratorStd.otf");
 }
 
 body {
-  background: url("/resources/images/background.jpg") no-repeat center center fixed;
+  background: url("../images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
 }
@@ -103,27 +103,27 @@ div.home-slide-image {
 }
 
 #home-slide1-image {
-  background: url("/resources/images/home_slide1.jpg") no-repeat center center;
+  background: url("../images/home_slide1.jpg") no-repeat center center;
 }
 
 #home-slide2-image {
-  background: url("/resources/images/home_slide2.jpg") no-repeat center center;
+  background: url("../images/home_slide2.jpg") no-repeat center center;
 }
 
 #home-slide3-image {
-  background: url("/resources/images/home_slide3.jpg") no-repeat center center;
+  background: url("../images/home_slide3.jpg") no-repeat center center;
 }
 
 #home-slide4-image {
-  background: url("/resources/images/home_slide4.jpg") no-repeat center center;
+  background: url("../images/home_slide4.jpg") no-repeat center center;
 }
 
 #home-slide5-image {
-  background: url("/resources/images/home_slide5.jpg") no-repeat center center;
+  background: url("../images/home_slide5.jpg") no-repeat center center;
 }
 
 #home-slide6-image {
-  background: url("/resources/images/home_slide6.jpg") no-repeat center center;
+  background: url("../images/home_slide6.jpg") no-repeat center center;
 }
 
 #home-right-container {
@@ -212,7 +212,7 @@ div.service-cell-splitter {
 }
 
 #contact-left-container {
-  background: url("/resources/images/contact.jpg") no-repeat center center;
+  background: url("../images/contact.jpg") no-repeat center center;
   left: 0;
 }
 
